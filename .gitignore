@@ -1,5 +1,7 @@
 /asr
 /exp
-/rpc/upload/
-/rpc/exp/
-/rpc/exp/log/*.log
+
+rpc/exp/
+rpc/upload/
+log
+.log
