@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "./asr";
+
+service ASR {
+    rpc ASR (AsrRequest) returns (AsrResponse){}
+}
+
+message AsrRequest {
+    string filename = 1;
+    bytes audiobytes = 2;
+}
+
+message AsrResponse {
+    string audiotext = 1;
+}
