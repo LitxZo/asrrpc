@@ -1,0 +1,7 @@
+
+
+grpcio==1.42.0
+paddlespeech==1.4.1
+protobuf==3.20.0
+numpy==1.22.4
+# paddlepaddle-gpu==2.6.1

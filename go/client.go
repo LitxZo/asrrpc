@@ -14,7 +14,7 @@ import (
 func main() {
 
 	client := asrclient.NewASR(zrpc.MustNewClient(zrpc.RpcClientConf{
-		Target: "dns:///127.0.0.1:8080",
+		Target: "127.0.0.1:8080",
 	}))
 	f, err := os.Open("./ie.wav")
 	if err != nil {

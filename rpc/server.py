@@ -8,12 +8,12 @@ from paddlespeech.cli.asr.infer import ASRExecutor
 # 实现 proto 文件中定义的 SearchService
 class ASRRpc(asr_pb2_grpc.ASRServicer):
 
-    upload_path = "./upload" 
+    upload_path = "./rpc/upload" 
     # 实现 proto 文件中定义的 rpc 调用
     def ASR(self, request, context):
         fname = request.filename
         filebytes = request.audiobytes
-        file_path = os.path.join(self.upload_path, fname)
+        file_path = self.upload_path + "/" + fname
         with open(file_path, "wb") as fo:
             fo.write(filebytes) 
             print("Received file is saved in ", file_path)
